@@ -1,0 +1,31 @@
+# ---- macOS ----
+.DS_Store
+
+# ---- Eclipse (Versuch 1-8) ----
+Debug/
+Release/
+.settings/
+.metadata/
+*.o
+*.d
+
+# ---- Qt Creator (Versuch 9) ----
+build/
+build-*/
+*.pro.user
+*.autosave
+
+# ---- Genel derleyici çıktıları ----
+*.exe
+*.out
+a.out
+
+# ---- Arşivler ----
+*.zip
+
+# ---- Eclipse proje dosyaları ----
+.cproject
+.project
+
+# ---- Doxygen üretilen HTML çıktısı ----
+html/

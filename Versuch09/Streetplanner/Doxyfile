@@ -1,0 +1,67 @@
+# Doxyfile fuer Streetplanner (PI1 Versuch 9)
+# Ausfuehren im Projektverzeichnis:  doxygen Doxyfile
+# Ergebnis:  ./doc/html/index.html
+
+#---------------------------------------------------------------------------
+# Projekt
+#---------------------------------------------------------------------------
+PROJECT_NAME           = "Streetplanner"
+PROJECT_BRIEF          = "PI1 Versuch 9 - GUI-Programmierung mit Qt"
+PROJECT_NUMBER         = "Versuch 9"
+OUTPUT_DIRECTORY       = doc
+OUTPUT_LANGUAGE        = German
+CREATE_SUBDIRS         = NO
+
+#---------------------------------------------------------------------------
+# Was dokumentiert wird
+#---------------------------------------------------------------------------
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+EXTRACT_LOCAL_CLASSES  = YES
+JAVADOC_AUTOBRIEF      = YES
+QT_AUTOBRIEF           = YES
+BUILTIN_STL_SUPPORT    = YES
+MARKDOWN_SUPPORT       = YES
+OPTIMIZE_OUTPUT_FOR_C  = NO
+
+#---------------------------------------------------------------------------
+# Eingabe
+#---------------------------------------------------------------------------
+INPUT                  = .
+FILE_PATTERNS          = *.h *.cpp
+RECURSIVE              = YES
+# build-Ordner, macOS-Muell und generierte ui_/moc_ Dateien ausschliessen
+EXCLUDE                = build __MACOSX
+EXCLUDE_PATTERNS       = */build/* moc_* ui_* *.qmake.stash
+EXCLUDE_SYMBOLS        = Ui::*
+
+#---------------------------------------------------------------------------
+# Diagramme (Vererbung: City->BigTown/SmallTown, AbstractMap->Map, MapIo->...)
+#---------------------------------------------------------------------------
+HAVE_DOT               = NO
+CLASS_GRAPH            = YES
+COLLABORATION_GRAPH    = NO
+UML_LOOK               = NO
+# Wenn Graphviz installiert ist (brew install graphviz), auf YES setzen
+# fuer huebschere Diagramme:
+# HAVE_DOT             = YES
+# UML_LOOK             = YES
+
+#---------------------------------------------------------------------------
+# Ausgabeformate
+#---------------------------------------------------------------------------
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+GENERATE_LATEX         = NO
+GENERATE_TREEVIEW      = YES
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = NO
+
+#---------------------------------------------------------------------------
+# Warnungen
+#---------------------------------------------------------------------------
+QUIET                  = NO
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = YES
+WARN_NO_PARAMDOC       = YES
